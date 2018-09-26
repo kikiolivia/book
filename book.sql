@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 24, 2018 at 03:46 AM
+-- Generation Time: Sep 26, 2018 at 10:11 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.2.2
 
@@ -30,18 +30,22 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `komen` (
   `id` int(11) NOT NULL,
+  `id_post` int(11) NOT NULL,
   `tanggal` datetime NOT NULL,
   `nama` varchar(255) NOT NULL,
-  `pesan` varchar(255) NOT NULL,
-  `id_post` int(11) NOT NULL
+  `pesan` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `komen`
 --
 
-INSERT INTO `komen` (`id`, `tanggal`, `nama`, `pesan`, `id_post`) VALUES
-(6, '2018-09-14 09:42:18', 'kiki', 'komen', 6);
+INSERT INTO `komen` (`id`, `id_post`, `tanggal`, `nama`, `pesan`) VALUES
+(9, 4, '2018-09-26 11:45:06', 'dsa', 'sda'),
+(10, 5, '2018-09-26 11:45:52', 'test', 'book'),
+(11, 5, '2018-09-26 11:46:26', 'test', 'root@localhost'),
+(12, 5, '2018-09-26 11:48:44', 'testlagi', 'guestbook,post,user'),
+(13, 5, '2018-09-26 11:49:20', 'testlagi', 'komen,post,user');
 
 -- --------------------------------------------------------
 
@@ -121,7 +125,7 @@ ALTER TABLE `user`
 -- AUTO_INCREMENT for table `komen`
 --
 ALTER TABLE `komen`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `post`

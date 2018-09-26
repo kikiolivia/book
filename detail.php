@@ -24,7 +24,7 @@ if (isset($_POST["submit"])) {
 	$id_post = $_POST["id_post"];
 	$nama = $_POST["nama"];
 	$pesan = $_POST["pesan"];
-	$result = mysqli_query($conn, "INSERT INTO komen VALUES (NULL, NOW(), '$nama', '$pesan', '$id_post')");
+	$result = mysqli_query($conn, "INSERT INTO komen VALUES (NULL, '$id_post',  NOW(), '$nama', '$pesan')");
 	if ($result) {
 		header("location:detail.php?id={$id}");
 	  }
